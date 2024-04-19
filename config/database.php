@@ -6,7 +6,7 @@
     $password = "123456789";
     $port = "5432";
 
-    
+
     $conn = pg_connect("
     host=$host
     dbname=$dbname
@@ -14,4 +14,9 @@
     password=$password
     port=$port
     ");
-?>
+    if (!$conn){
+        die("Connection error:".pg_last_error());
+    }else {
+        echo "Success !!!";
+    }
+?>                                                                                                                                                                                 
