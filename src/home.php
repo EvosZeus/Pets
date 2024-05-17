@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["id_user"])){
+        //header("Location:home.php");
+        header("refresh:0;url=signin.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,7 +95,7 @@
                         <a href="detail.html" class="dropdown-item">Blog Detail</a>
                     </div>
                 </div>
-                <a href="index.html" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Sign off <i class="bi bi-arrow-right"></i></a>
+                <a href="backend/logout.php" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Sign Out <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </nav>
