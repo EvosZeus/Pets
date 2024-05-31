@@ -18,7 +18,7 @@
         die("Connection error:".pg_last_error());
     }else {
        
-        echo " Success !!!";
+        
     }
     
 ?>                                                                                                                                                                                 
